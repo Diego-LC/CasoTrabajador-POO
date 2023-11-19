@@ -27,3 +27,5 @@ A partir de su modelo anterior, genere el código fuente Java que permita crear 
 - modelo de clases UML, imagen y VPP
 
 - repositorio de código fuente
+
+![Diagrama Uml](CasoTrabajadorPOO.jpg)
