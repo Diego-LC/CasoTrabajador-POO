@@ -23,6 +23,10 @@ public class Trabajador extends Persona {
 				+"\nAfp: "+this.afp);
 	}
 
+	public String getNombre(){
+		return this.nombre;
+	}
+
 	public String getIsapre() {
 		return this.isapre;
 	}
