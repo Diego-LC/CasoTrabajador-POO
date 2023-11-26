@@ -27,6 +27,10 @@ public class Trabajador extends Persona {
 		return this.nombre;
 	}
 
+	public String getApellido(){
+		return this.apellido;
+	}
+
 	public String getIsapre() {
 		return this.isapre;
 	}

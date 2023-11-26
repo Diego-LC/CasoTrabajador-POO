@@ -2,7 +2,6 @@ package ventanas;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-import javax.swing.text.InternationalFormatter;
 
 public class VentanaGenerica extends JFrame implements ActionListener {
     private final Font fuenteTitulo;
@@ -11,7 +10,7 @@ public class VentanaGenerica extends JFrame implements ActionListener {
     protected VentanaGenerica(String nombre, int largoX, int largoY) {
         super(nombre);
         super.setVisible(true);
-        super.setDefaultCloseOperation(0);
+        super.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         super.setSize(largoX, largoY);
         super.setLocationRelativeTo(null);
         super.setResizable(false);
@@ -42,29 +41,6 @@ public class VentanaGenerica extends JFrame implements ActionListener {
         label.setFont(this.fuenteTexto);
         this.add(label);
     }
-
-    protected JFormattedTextField generarJFormattedTextField(InternationalFormatter formato, int posicionX, int posicionY, int largoX, int largoY) {
-        JFormattedTextField textField = new JFormattedTextField(formato);
-        textField.setBounds(posicionX, posicionY, largoX, largoY);
-        return textField;
-    }
-
-    protected InternationalFormatter generarFormato(int minimo) {
-        InternationalFormatter formato = new InternationalFormatter();
-        formato.setMinimum(minimo);
-
-
-        return formato;
-    }
-
-    protected InternationalFormatter generarFormato(int minimo, int maximo) {
-        InternationalFormatter formato = new InternationalFormatter();
-        formato.setMinimum(minimo);
-        formato.setMaximum(maximo);
-
-        return formato;
-    }
-
     protected JTextField generarJTextField(int posicionX, int posicionY, int largoX, int largoY) {
         JTextField textField = new JTextField();
         textField.setBounds(posicionX, posicionY, largoX, largoY);
